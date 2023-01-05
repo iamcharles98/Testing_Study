@@ -62,7 +62,7 @@ Test cases를 이용하여 responses를 만들어 낸 후 비교하여 분석하
 
 ### 테스팅 수명주기 (V-Model)
 
-![Untitled](#%20%E1%84%89%E1%85%A9%E1%84%91%E1%85%B3%E1%84%90%E1%85%B3%E1%84%8B%E1%85%B0%E1%84%8B%E1%85%A5%20%E1%84%90%E1%85%A6%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%86%BC_1%20964e04dd76b2483283e73c67ef31e93d/Untitled%201.png)
+<img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://user-images.githubusercontent.com/77047099/210713091-f0f0dcbc-c02a-41ba-a5dc-77152aafa8a2.png" width="513" height="370">
 
 요구분석 ↔ 인수테스트 : 사용자의 요구사항(인터페이스, 성능, 보안 등)을 기록. 시스템 설계 단계에서 설계자에 대한 지침으로 사용된다. 사용자 테스트에 대한 설계는 이 요구사항 분석 단계에서 이루어진다.
 
