@@ -1,7 +1,7 @@
 # Testing_Study
 # Software Testing Method
 # JUnit 
-# XUnit
+# Spring Test
 
 This Repo is maded for Winter_Vacation_Research_Program_Study.
 I'm gonna study about Testing.
