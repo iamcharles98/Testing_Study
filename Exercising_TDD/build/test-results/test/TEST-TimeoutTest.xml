@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MathApplicationTester" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-01-26T11:08:36" hostname="jeongchansuui-MacBookAir.local" time="0.598">
+<testsuite name="TimeoutTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-01-27T07:14:57" hostname="jeongchansuui-MacBookAir.local" time="0.695">
   <properties/>
-  <testcase name="add_Test" classname="MathApplicationTester" time="0.598">
-    <failure message="Wanted but not invoked:&#10;calculatorService.add(10.0d, 10.0d);&#10;-&gt; at MathApplicationTester.add_Test(MathApplicationTester.java:26)&#10;Actually, there were zero interactions with this mock.&#10;" type="org.mockito.exceptions.verification.WantedButNotInvoked">Wanted but not invoked:
-calculatorService.add(10.0d, 10.0d);
--&gt; at MathApplicationTester.add_Test(MathApplicationTester.java:26)
+  <testcase name="timeout_test" classname="TimeoutTest" time="0.695">
+    <failure message="Wanted but not invoked:&#10;calculatorService.add(20.0d, 10.0d);&#10;-&gt; at TimeoutTest.timeout_test(TimeoutTest.java:26)&#10;Actually, there were zero interactions with this mock.&#10;" type="org.mockito.exceptions.verification.WantedButNotInvoked">Wanted but not invoked:
+calculatorService.add(20.0d, 10.0d);
+-&gt; at TimeoutTest.timeout_test(TimeoutTest.java:26)
 Actually, there were zero interactions with this mock.
 
-	at app//MathApplicationTester.add_Test(MathApplicationTester.java:26)
+	at app//TimeoutTest.timeout_test(TimeoutTest.java:26)
 	at java.base@18.0.1.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base@18.0.1.1/java.lang.reflect.Method.invoke(Method.java:577)
 	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
 	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
 	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
 	at app//org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:55)
 	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at app//org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
