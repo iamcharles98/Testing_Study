@@ -1,4 +1,4 @@
-/*import Exceptions.InvalidInputException;
+import Exceptions.InvalidInputException;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -55,7 +55,12 @@ public class MathApplicationTester {
         doThrow(new RuntimeException("Add operation not implemented")).when(calculatorService).add(10.0,20.0);
         Assert.assertEquals(mathApplication.add(10.0,20.0),30.0,0);
     }
+    @Test
+    public void ThrowEx()
+    {
+        when(calculatorService.divide(1.0,0.0)).thenThrow(new RuntimeException());
+        Assert.assertThrows(RuntimeException.class, () ->{calculatorService.divide(1.0,0.0);});
+    }
 
 
 }
-*/

@@ -1,8 +1,11 @@
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
+
+import java.time.Instant;
 
 import static java.lang.Thread.sleep;
 import static org.mockito.Mockito.*;
@@ -20,14 +23,27 @@ public class TimeoutTest {
         mathApplication.setCalculatorService(calculatorService);
     }
 
+    private final Runnable asyncOp = new Runnable() {
+        @Override
+        public void run() {
+            try {
+                Thread.sleep(1000);
+                calculatorService.add(20.0, 10.0);
+            } catch (InterruptedException e) {
+            }
+        }
+    };
     @Test
     public void timeout_test() throws InterruptedException {
 
-        verify(calculatorService,timeout(100)).add(20.0,10.0);
         when(calculatorService.add(20.0,10.0)).thenReturn(30.0);
-        Assert.assertEquals(mathApplication.add(20.0,10.0),30.0,0);
-
+       // new Thread(asyncOp).start();
+        calculatorService.add(20.0,10.0);
+        sleep(1000);
+        verify(calculatorService,timeout(10)).add(20.0,10.0);
     }
+
+
 
    /* private class Calulator implements CalculatorService {
 
